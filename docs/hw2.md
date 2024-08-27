@@ -7,9 +7,8 @@ __BOLD__
 _ITALLICS_
 *ALSO ITALLICS*
 
-`this is a quote...maybe?`
+>this is a quote...maybe?
 
-```and this is a BLOCK quote!```
 
 ```python
 #in python
