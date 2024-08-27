@@ -18,15 +18,15 @@ import numpy as np
 ```
 
 Some types of alerts
-- [!NOTE]
+[!NOTE]
 note
-- [!TIP]
+[!TIP]
 tip
-- [!IMPORTANT]
+[!IMPORTANT]
 important
-- [!WARNING]
+[!WARNING]
 warning
-- [!CAUTION]
+[!CAUTION]
 caution
 
 - lists can use: '* - +'
