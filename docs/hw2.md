@@ -7,22 +7,31 @@ __BOLD__
 _ITALLICS_
 *ALSO ITALLICS*
 
-'this is a quote...maybe?'
+`this is a quote...maybe?`
 
-'''and this is a BLOCK quote!'''
+```and this is a BLOCK quote!```
 
-'''python
+```python
 #in python
 import matplotlib as plt
 import numpy as np
-'''
+```
 
 Some types of alerts
-- [!NOTE] note
-- [!TIP] tip
-- [!IMPORTANT] important
-- [!WARNING] warning
-- [!CAUTION] caution
+>[!NOTE]
+>note
+
+>[!TIP]
+>tip
+
+>[!IMPORTANT]
+>important
+
+>[!WARNING]
+>warning
+
+>[!CAUTION]
+>caution
 
 - lists can use: '* - +'
 + like this
@@ -40,4 +49,4 @@ Some types of alerts
 
 **THIS** is a [*link*](https://www.youtube.com/watch?v=GFq6wH5JR2A)
 
-![and this is an image](/image.jpg)
+![and this is an image](image.jpg)
