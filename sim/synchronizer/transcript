@@ -1,0 +1,25 @@
+# Compile of synchronizer.vhd was successful.
+vsim work.synchronizer_tb
+# vsim work.synchronizer_tb 
+# Start time: 11:18:11 on Sep 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading std.env(body)
+# Loading ieee.numeric_std(body)
+# Loading work.synchronizer_tb(testbench)#1
+add wave sim:/synchronizer_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dhjen  Hostname: LAPTOP-NR83F3JA  ProcessID: 4040
+#           Attempting to use alternate WLF file "./wlfta21v2h".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfta21v2h
+run -all
+# ** Note: all tests passed!
+#    Time: 100 ns  Iteration: 0  Instance: /synchronizer_tb
+# 1
+# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/synchronizer/synchronizer_tb.vhd line 111
+# Causality operation skipped due to absence of debug database file
+# End time: 11:19:45 on Sep 05,2024, Elapsed time: 0:01:34
+# Errors: 0, Warnings: 4
