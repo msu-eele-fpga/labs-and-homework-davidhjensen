@@ -5,6 +5,6 @@ A timer was written in VHDL to get practice with generics and writing testbenche
 
 
 ## Deliverables
-![Successful self-checking testbench transcript](/docs/assets/hw-04_transcript.png)
-![Waveform testing a 100ns and 200ns timer](/docs/assets/hw-04_waveform.png)
+![Successful self-checking testbench transcript](/docs/assets/hw-04_transcript.jpg)
+![Waveform testing a 100ns and 200ns timer](/docs/assets/hw-04_waveform.jpg)
 
