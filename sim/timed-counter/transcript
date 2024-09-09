@@ -1,0 +1,1344 @@
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 10:58:37 on Sep 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 111 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 131 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 11:00:05 on Sep 09,2024, Elapsed time: 0:01:28
+# Errors: 2, Warnings: 1
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:03:06 on Sep 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 111 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 131 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 211 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 271 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+clear
+# invalid command name "clear"
+quit -sim
+# End time: 11:05:23 on Sep 09,2024, Elapsed time: 0:02:17
+# Errors: 4, Warnings: 3
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:09:58 on Sep 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 111 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 131 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:14:37 on Sep 09,2024, Elapsed time: 0:04:39
+# Errors: 2, Warnings: 1
+# Compile of tb_pkg.vhd was successful.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:16:15 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-13) Recompile work.timed_counter_tb because work.tb_pkg has changed.
+# ** Warning: (vopt-12) Recompile work.timed_counter_tb(testbench) after work.timed_counter_tb is recompiled.
+# ** Warning: (vopt-13) Recompile work.timed_counter_tb(testbench) because work.tb_pkg has changed.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 112 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 132 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:17:17 on Sep 09,2024, Elapsed time: 0:01:02
+# Errors: 2, Warnings: 5
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:19:39 on Sep 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 112 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 132 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:21:23 on Sep 09,2024, Elapsed time: 0:01:44
+# Errors: 2, Warnings: 1
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:21:39 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 251 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 271 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:23:52 on Sep 09,2024, Elapsed time: 0:02:13
+# Errors: 2, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd failed with 7 errors.
+# 5 compiles, 1 failed with 7 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd failed with 5 errors.
+# 5 compiles, 1 failed with 5 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd failed with 3 errors.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd failed with 2 errors.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:31:52 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 111 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 131 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:33:07 on Sep 09,2024, Elapsed time: 0:01:15
+# Errors: 2, Warnings: 9
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:33:52 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Note :: PA Debug File '' not found. PA Dataflow Coloring not enabled.
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 231 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 271 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:35:15 on Sep 09,2024, Elapsed time: 0:01:23
+# Errors: 2, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:40:09 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 151 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:40:55 on Sep 09,2024, Elapsed time: 0:00:46
+# Errors: 1, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:43:03 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 88
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 88
+quit -sim
+# End time: 11:44:19 on Sep 09,2024, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:44:52 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 231 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 86
+quit -sim
+# End time: 11:45:47 on Sep 09,2024, Elapsed time: 0:00:55
+# Errors: 1, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 1 errors.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 2 errors.
+# Compile of timed_counter.vhd was successful.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 2 errors.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 11 errors.
+# 5 compiles, 1 failed with 11 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 11 errors.
+# 5 compiles, 1 failed with 11 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 4 errors.
+# 5 compiles, 1 failed with 4 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 4 errors.
+# 5 compiles, 1 failed with 4 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 3 errors.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 13:28:52 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error: C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd(57): (vopt-1134) Incompatible modes for port "counting" in component "timed_counter" when binding to entity "timed_counter".
+# Optimization failed
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/work/@_opt/_lib3_2.qpg".
+# ** Warning: (vopt-31) Unable to unlink file "C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/work/@_opt/_lib3_2.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-133) Unable to remove directory "C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/work/@_opt".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=3.
+# Error loading design
+# End time: 13:28:53 on Sep 09,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 17
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 13:29:05 on Sep 09,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd(57): (vopt-1134) Incompatible modes for port "counting" in component "timed_counter" when binding to entity "timed_counter".
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 13:29:06 on Sep 09,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 13:30:03 on Sep 09,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 92
+quit -sim
+# End time: 13:30:51 on Sep 09,2024, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 3 errors.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 3 errors.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 13:33:54 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 94
+quit -sim
+# End time: 13:34:27 on Sep 09,2024, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 4
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 3 errors.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+# 5 compiles, 0 failed with no errors.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 13:39:29 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 131 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 88
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 231 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 88
+quit -sim
+# End time: 13:40:11 on Sep 09,2024, Elapsed time: 0:00:42
+# Errors: 2, Warnings: 4
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 13:41:17 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave -r /*
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 131 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 88
+quit -sim
+# End time: 13:42:34 on Sep 09,2024, Elapsed time: 0:01:17
+# Errors: 1, Warnings: 2
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 13:43:49 on Sep 09,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 88
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter not done'
+#    Time: 231 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 271 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 88
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 92
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+run
+# testing 100 ns timer: enabled:
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+# testing 100 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 93
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 471 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 571 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 102
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 571 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 103
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 571 ns  Iteration: 0  Instance: /timed_counter_tb
+# testing 200 ns timer: enabled:
+add wave sim:/timed_counter_tb/*
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 571 ns  Iteration: 0  Instance: /timed_counter_tb
+# testing 200 ns timer: enabled:
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 471 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 571 ns  Iteration: 0  Instance: /timed_counter_tb
+# testing 200 ns timer: enabled:
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 571 ns  Iteration: 0  Instance: /timed_counter_tb
+# testing 200 ns timer: enabled:
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 611 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 631 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 651 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 671 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 711 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 731 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 751 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 771 ns  Iteration: 0  Instance: /timed_counter_tb
+# testing 200 ns timer: enabled:
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+# testing 100 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 571 ns  Iteration: 0  Instance: /timed_counter_tb
+# testing 200 ns timer: enabled:
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# testing 200 ns timer: enabled:
+run
+# ** Failure: error in test case 'counter is done'
+#    Time: 1631 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1651 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1671 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1691 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1711 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1731 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1751 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1771 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1791 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2031 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2051 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2071 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2091 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2111 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2131 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2151 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2171 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2191 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2431 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2451 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2471 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2491 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2511 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2531 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2551 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2571 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 2591 ns  Iteration: 0  Instance: /timed_counter_tb
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 151
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+# testing 100 ns timer: enabled:
+# testing 200 ns timer: enabled:
+# ** Failure: error in test case 'counter is done'
+#    Time: 1631 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1651 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1671 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1691 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1711 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1731 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1751 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1771 ns  Iteration: 0  Instance: /timed_counter_tb
+# ** Failure: error in test case 'counter is done'
+#    Time: 1791 ns  Iteration: 0  Instance: /timed_counter_tb
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# testing 200 ns timer: enabled:
+# Compile of print_pkg.vhd was successful.
+# Compile of assert_pkg.vhd was successful.
+# Compile of tb_pkg.vhd was successful.
+# Compile of timed_counter.vhd was successful.
+# Compile of timed_counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading std.env(body)
+# Loading work.timed_counter_tb(testbench)#1
+# Loading work.timed_counter(timed_counter_arch)#1
+# Loading work.timed_counter(timed_counter_arch)#2
+run
+# testing 100 ns timer: enabled:
+# testing 200 ns timer: enabled:
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+# testing 100 ns timer: enabled:
+# testing 200 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 153
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+add wave sim:/timed_counter_tb/*
+run
+# testing 100 ns timer: enabled:
+# testing 200 ns timer: enabled:
+# 1
+# Break in Process stimuli_and_checker at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/timed-counter/timed_counter_tb.vhd line 153
+quit -sim
+# End time: 15:42:52 on Sep 09,2024, Elapsed time: 1:59:03
+# Errors: 0, Warnings: 1
