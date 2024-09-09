@@ -4,8 +4,8 @@
 A state machine for a vending machine was developed using a two-process Mealey framework.
 
 ## Deliverables
-![Successful transcript](/docs/assets/hw-5_transcript)
-![Successful waveform](/docs/assets/hw-5_waveform)
+![Successful transcript](/docs/assets/hw-05_transcript)
+![Successful waveform](/docs/assets/hw-05_waveform)
 
 
 
