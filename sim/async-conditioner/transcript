@@ -1,42 +1,7 @@
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd failed with 1 errors.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 1 failed with 1 error.
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd failed with 21 errors.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 1 failed with 21 errors.
-# Compile of async_conditioner_tb.vhd failed with 1 errors.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
 vsim work.async_conditioner_tb
 # vsim work.async_conditioner_tb 
-# Start time: 21:03:25 on Sep 11,2024
-# ** Note: (vsim-3812) Design is being optimized...
+# Start time: 09:55:11 on Sep 12,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -54,27 +19,17 @@ vsim work.async_conditioner_tb
 # Loading work.async_conditioner_tb(testbench)#1
 add wave sim:/async_conditioner_tb/*
 run -all
-# ** Warning: Error on clock cycle 2: pulse expected = 1 | pulse = 0
-#    Time: 80 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 260 ns  Iteration: 0  Instance: /async_conditioner_tb
+# ** Note: all tests passed!
+#    Time: 400 ns  Iteration: 0  Instance: /async_conditioner_tb
 # 1
 # Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
 # Causality operation skipped due to absence of debug database file
-# Compile of one_pulse.vhd was successful.
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+quit -sim
+# End time: 09:57:38 on Sep 12,2024, Elapsed time: 0:02:27
+# Errors: 0, Warnings: 1
+vsim work.debouncer_tb
+# vsim work.debouncer_tb 
+# Start time: 09:57:39 on Sep 12,2024
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -90,43 +45,37 @@ restart -f
 # Loading work.print_pkg(body)
 # Loading work.tb_pkg(body)
 # Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
-add wave -r /*
+# Loading work.debouncer_tb(testbench)#1
+add wave sim:/debouncer_tb/*
 run -all
-# ** Warning: Error on clock cycle 2: pulse expected = 1 | pulse = 0
-#    Time: 80 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 5: pulse expected = 0 | pulse = 1
-#    Time: 140 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 8: pulse expected = 1 | pulse = 0
-#    Time: 200 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 260 ns  Iteration: 0  Instance: /async_conditioner_tb
+# ----------------------------------------------------
+# testing debouncer with debounce time = 1000 ns
+# ----------------------------------------------------
+# test: before button pressed
+# test: while pressed and bouncing
+# test: while button held
+# test: while released and bouncing
+# test: after button released
+# test: make sure debouncer debounces for correct time
+# test: make sure debouncer remains high for entire debounce time
+# ----------------------------------------------------
+# testing debouncer with debounce time = 10000 ns
+# ----------------------------------------------------
+# test: before button pressed
+# test: while pressed and bouncing
+# test: while button held
+# test: while released and bouncing
+# test: after button released
+# test: make sure debouncer debounces for correct time
+# test: make sure debouncer remains high for entire debounce time
 # 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd failed with 1 errors.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 1 failed with 1 error.
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Break in Process stimuli_generator at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/debouncer_tb.vhd line 163
+quit -sim
+# End time: 09:59:50 on Sep 12,2024, Elapsed time: 0:02:11
+# Errors: 0, Warnings: 1
+vsim work.one_pulse_tb
+# vsim work.one_pulse_tb 
+# Start time: 09:59:52 on Sep 12,2024
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -142,260 +91,12 @@ restart -f
 # Loading work.print_pkg(body)
 # Loading work.tb_pkg(body)
 # Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
-add wave -r /*
-run -all
-# ** Warning: Error on clock cycle 2: pulse expected = 1 | pulse = 0
-#    Time: 80 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 5: pulse expected = 0 | pulse = 1
-#    Time: 140 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 8: pulse expected = 1 | pulse = 0
-#    Time: 200 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 260 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading ieee.fixed_generic_pkg(body)
-# Loading ieee.float_generic_pkg(body)
-# Loading ieee.fixed_pkg
-# Loading ieee.float_pkg
-# Loading work.assert_pkg(body)
-# Loading work.print_pkg(body)
-# Loading work.tb_pkg(body)
-# Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
-run -all
-# ** Warning: Error on clock cycle 2: pulse expected = 1 | pulse = 0
-#    Time: 80 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 5: pulse expected = 0 | pulse = 1
-#    Time: 140 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 260 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-run -all
-# ** Warning: Error on clock cycle 2: pulse expected = 0 | pulse = 1
-#    Time: 340 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 520 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading ieee.fixed_generic_pkg(body)
-# Loading ieee.float_generic_pkg(body)
-# Loading ieee.fixed_pkg
-# Loading ieee.float_pkg
-# Loading work.assert_pkg(body)
-# Loading work.print_pkg(body)
-# Loading work.tb_pkg(body)
-# Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
-run -all
-# ** Warning: Error on clock cycle 4: pulse expected = 1 | pulse = 0
-#    Time: 120 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 5: pulse expected = 0 | pulse = 1
-#    Time: 140 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 14: pulse expected = 1 | pulse = 0
-#    Time: 320 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 340 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading ieee.fixed_generic_pkg(body)
-# Loading ieee.float_generic_pkg(body)
-# Loading ieee.fixed_pkg
-# Loading ieee.float_pkg
-# Loading work.assert_pkg(body)
-# Loading work.print_pkg(body)
-# Loading work.tb_pkg(body)
-# Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
+# Loading work.one_pulse_tb(testbench)#1
+add wave sim:/one_pulse_tb/*
 run -all
 # ** Note: all tests passed!
-#    Time: 380 ns  Iteration: 0  Instance: /async_conditioner_tb
+#    Time: 220 ns  Iteration: 0  Instance: /one_pulse_tb
 # 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
-add wave -r /*
-run -all
-# ** Note: all tests passed!
-#    Time: 380 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading ieee.fixed_generic_pkg(body)
-# Loading ieee.float_generic_pkg(body)
-# Loading ieee.fixed_pkg
-# Loading ieee.float_pkg
-# Loading work.assert_pkg(body)
-# Loading work.print_pkg(body)
-# Loading work.tb_pkg(body)
-# Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
-run -all
-# ** Warning: Error on clock cycle 4: pulse expected = 1 | pulse = 0
-#    Time: 120 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 5: pulse expected = 0 | pulse = 1
-#    Time: 140 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 340 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-run -all
-# ** Failure: tests failed!
-#    Time: 680 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading ieee.fixed_generic_pkg(body)
-# Loading ieee.float_generic_pkg(body)
-# Loading ieee.fixed_pkg
-# Loading ieee.float_pkg
-# Loading work.assert_pkg(body)
-# Loading work.print_pkg(body)
-# Loading work.tb_pkg(body)
-# Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
-run -all
-# ** Warning: Error on clock cycle 16: pulse expected = 0 | pulse = 1
-#    Time: 360 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Warning: Error on clock cycle 17: pulse expected = 1 | pulse = 0
-#    Time: 380 ns  Iteration: 0  Instance: /async_conditioner_tb
-# ** Failure: tests failed!
-#    Time: 400 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# Compile of print_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of debouncer.vhd was successful.
-# Compile of debouncer_tb.vhd was successful with warnings.
-# Compile of one_pulse.vhd was successful.
-# Compile of one_pulse_tb.vhd was successful.
-# Compile of async_conditioner.vhd was successful.
-# Compile of async_conditioner_tb.vhd was successful.
-# Compile of synchronizer.vhd was successful.
-# 10 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading ieee.fixed_generic_pkg(body)
-# Loading ieee.float_generic_pkg(body)
-# Loading ieee.fixed_pkg
-# Loading ieee.float_pkg
-# Loading work.assert_pkg(body)
-# Loading work.print_pkg(body)
-# Loading work.tb_pkg(body)
-# Loading std.env(body)
-# Loading work.async_conditioner_tb(testbench)#1
-run -all
-# ** Note: all tests passed!
-#    Time: 400 ns  Iteration: 0  Instance: /async_conditioner_tb
-# 1
-# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/async_conditioner_tb.vhd line 141
-# End time: 21:45:21 on Sep 11,2024, Elapsed time: 0:41:56
+# Break in Process check_output at C:/Users/dhjen/Desktop/College/467 EELE/labs-and-homework-davidhjensen/sim/async-conditioner/one_pulse_tb.vhd line 133
+# End time: 10:01:42 on Sep 12,2024, Elapsed time: 0:01:50
 # Errors: 0, Warnings: 1
