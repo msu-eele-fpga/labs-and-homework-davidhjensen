@@ -28,11 +28,11 @@ entity de10nano is
     --  See DE10 Nano User Manual page 23
     ----------------------------------------
     --! 50 MHz clock input #1
-    fpga_clk1_50 : in    std_logic;
+    fpga_clk1_50 : in    std_ulogic;
     --! 50 MHz clock input #2
-    fpga_clk2_50 : in    std_logic;
+    fpga_clk2_50 : in    std_ulogic;
     --! 50 MHz clock input #3
-    fpga_clk3_50 : in    std_logic;
+    fpga_clk3_50 : in    std_ulogic;
 
     ----------------------------------------
     --  Push button inputs (KEY)
@@ -41,7 +41,7 @@ entity de10nano is
     --  when pressed (asserted)
     --  and produce a '1' in the rest (non-pushed) state
     ----------------------------------------
-    push_button_n : in    std_logic_vector(1 downto 0);
+    push_button_n : in    std_ulogic_vector(1 downto 0);
 
     ----------------------------------------
     --  Slide switch inputs (SW)
@@ -50,14 +50,14 @@ entity de10nano is
     --  in the down position
     --  (towards the edge of the board)
     ----------------------------------------
-    sw : in    std_logic_vector(3 downto 0);
+    sw : in    std_ulogic_vector(3 downto 0);
 
     ----------------------------------------
     --  LED outputs
     --  See DE10 Nano User Manual page 26
     --  Setting LED to 1 will turn it on
     ----------------------------------------
-    led : out   std_logic_vector(7 downto 0);
+    led : out   std_ulogic_vector(7 downto 0);
 
     ----------------------------------------
     --  GPIO expansion headers (40-pin)
@@ -80,8 +80,42 @@ end entity de10nano;
 
 architecture de10nano_arch of de10nano is
 
+  constant hps_hardcode : boolean := false;
+  constant base_period_hardcode : unsigned(7 downto 0) := "00000010";
+  constant led_reg_hardcode : std_ulogic_vector(7 downto 0) := "11111111";
+
+  component LED_patterns is
+    generic (
+      system_clock_period : time
+    );
+    port (
+      clk             : in std_ulogic;
+      rst             : in std_ulogic;
+      push_button     : in std_ulogic;
+      switches        : in std_ulogic_vector(3 downto 0);
+      hps_led_control : in boolean := false;
+      base_period     : in unsigned(7 downto 0);
+      led_reg         : in std_ulogic_vector(7 downto 0);
+      led             : out std_ulogic_vector(7 downto 0)
+    );
+  end component LED_patterns;
+
 begin
 
-	led(3 downto 0) <= sw(3 downto 0);
-	
+	dut : LED_patterns
+  generic map(
+    system_clock_period => 20 ns
+  )
+  port map
+  (
+    clk             => fpga_clk1_50,
+    rst             => not push_button_n(0),
+    push_button     => not push_button_n(1),
+    switches        => sw,
+    hps_led_control => hps_hardcode,
+    base_period     => base_period_hardcode,
+    led_reg         => led_reg_hardcode,
+    led             => led
+  );
+
 end architecture de10nano_arch;
