@@ -192,9 +192,9 @@ begin
   LED_7_FLIPPER : process (rst, clk_base)
   begin
     if (rst = '1') then
-      led(7) <= '0';
+      led_active(7) <= '0';
       elsif (rising_edge(clk_base)) then
-      led(7) <= not led(7);
+      led_active(7) <= not led_active(7);
     end if;
   end process LED_7_FLIPPER;
 
@@ -295,29 +295,31 @@ begin
   OUTPUT_LOGIC : process(rst, clk)
   begin
     if (rst = '1') then
-      led(6 downto 0) <= "0000000";
+      led_active(6 downto 0) <= "0000000";
       elsif (rising_edge(clk)) then
       case state is
         when idle =>
-          led(6 downto 0) <= "0000000";
+          led_active(6 downto 0) <= "0000000";
         when display =>
-          led(6 downto 4) <= "000";
-          led(3 downto 0) <= switches;
+          led_active(6 downto 4) <= "000";
+          led_active(3 downto 0) <= switches;
         when zero =>
-          led(6 downto 0) <= led_pat_0;
+          led_active(6 downto 0) <= led_pat_0;
         when one =>
-          led(6 downto 0) <= led_pat_1;
+          led_active(6 downto 0) <= led_pat_1;
         when two =>
-          led(6 downto 0) <= led_pat_2;
+          led_active(6 downto 0) <= led_pat_2;
         when three =>
-          led(6 downto 0) <= led_pat_3;
+          led_active(6 downto 0) <= led_pat_3;
         when four =>
-          led(6 downto 0) <= led_pat_4;
+          led_active(6 downto 0) <= led_pat_4;
         when others =>
-          led(6 downto 0) <= "0000000";
+          led_active(6 downto 0) <= "0000000";
       end case;
     end if;
   end process OUTPUT_LOGIC;
+
+  led <= led_reg when hps_led_control else led_active;
 
   DISPLAY_TIMER : process (clk, rst)
   begin

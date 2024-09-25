@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "09/25/2024 16:27:32"
+// DATE "09/25/2024 17:02:25"
 
 // 
 // Device: Altera 5CSEBA6U23I7 Package UFBGA672
@@ -46,10 +46,10 @@ input 	fpga_clk3_50;
 input 	[1:0] push_button_n;
 input 	[3:0] sw;
 output 	[7:0] led;
-inout 	[35:0] gpio_0;
-inout 	[35:0] gpio_1;
-inout 	[15:0] arduino_io;
-inout 	arduino_reset_n;
+output 	[35:0] gpio_0;
+output 	[35:0] gpio_1;
+output 	[15:0] arduino_io;
+output 	arduino_reset_n;
 
 // Design Ports Information
 // fpga_clk2_50	=>  Location: PIN_Y13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -1339,8 +1339,8 @@ wire \dut|clk_gen_comp|LessThan0~24_combout ;
 wire \dut|clk_gen_comp|internal_div_1~0_combout ;
 wire \dut|clk_gen_comp|internal_div_1~feeder_combout ;
 wire \dut|clk_gen_comp|internal_div_1~q ;
-wire \dut|led[7]~0_combout ;
-wire \dut|led[7]~feeder_combout ;
+wire \dut|led_active[7]~0_combout ;
+wire \dut|led_active[7]~feeder_combout ;
 wire [29:0] \dut|clk_gen_comp|max_mult_2 ;
 wire [6:0] \dut|pat2|count ;
 wire [6:0] \dut|pat3|count ;
@@ -1356,7 +1356,7 @@ wire [31:0] \dut|clk_gen_comp|cnt_div_8 ;
 wire [31:0] \dut|clk_gen_comp|cnt_div_2 ;
 wire [28:0] \dut|clk_gen_comp|max_div_2 ;
 wire [31:0] \dut|clk_gen_comp|cnt_mult_4 ;
-wire [7:0] \dut|led ;
+wire [7:0] \dut|led_active ;
 wire [6:0] \dut|pat2|LED ;
 wire [6:0] \dut|pat4|LED ;
 wire [6:0] \dut|pat3|LED ;
@@ -1766,7 +1766,7 @@ assign \dut|clk_gen_comp|Mult5~45  = \dut|clk_gen_comp|Mult5~8_RESULTA_bus [63];
 
 // Location: IOOBUF_X89_Y8_N22
 cyclonev_io_obuf \led[0]~output (
-	.i(\dut|led [0]),
+	.i(\dut|led_active [0]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1782,7 +1782,7 @@ defparam \led[0]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y9_N39
 cyclonev_io_obuf \led[1]~output (
-	.i(\dut|led [1]),
+	.i(\dut|led_active [1]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1798,7 +1798,7 @@ defparam \led[1]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y9_N5
 cyclonev_io_obuf \led[2]~output (
-	.i(\dut|led [2]),
+	.i(\dut|led_active [2]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1814,7 +1814,7 @@ defparam \led[2]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y9_N22
 cyclonev_io_obuf \led[3]~output (
-	.i(\dut|led [3]),
+	.i(\dut|led_active [3]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1830,7 +1830,7 @@ defparam \led[3]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y4_N79
 cyclonev_io_obuf \led[4]~output (
-	.i(\dut|led [4]),
+	.i(\dut|led_active [4]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1846,7 +1846,7 @@ defparam \led[4]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y4_N96
 cyclonev_io_obuf \led[5]~output (
-	.i(\dut|led [5]),
+	.i(\dut|led_active [5]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1862,7 +1862,7 @@ defparam \led[5]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y8_N5
 cyclonev_io_obuf \led[6]~output (
-	.i(\dut|led [6]),
+	.i(\dut|led_active [6]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1878,7 +1878,7 @@ defparam \led[6]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y9_N56
 cyclonev_io_obuf \led[7]~output (
-	.i(\dut|led [7]),
+	.i(\dut|led_active [7]),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -20920,7 +20920,7 @@ defparam \dut|Selector19~2 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X80_Y7_N31
-dffeas \dut|led[0] (
+dffeas \dut|led_active[0] (
 	.clk(\fpga_clk1_50~inputCLKENA0_outclk ),
 	.d(\dut|Selector19~2_combout ),
 	.asdata(vcc),
@@ -20931,11 +20931,11 @@ dffeas \dut|led[0] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [0]),
+	.q(\dut|led_active [0]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[0] .is_wysiwyg = "true";
-defparam \dut|led[0] .power_up = "low";
+defparam \dut|led_active[0] .is_wysiwyg = "true";
+defparam \dut|led_active[0] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X80_Y3_N3
@@ -21200,7 +21200,7 @@ defparam \dut|Selector18~2 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X80_Y7_N7
-dffeas \dut|led[1] (
+dffeas \dut|led_active[1] (
 	.clk(\fpga_clk1_50~inputCLKENA0_outclk ),
 	.d(\dut|Selector18~2_combout ),
 	.asdata(vcc),
@@ -21211,11 +21211,11 @@ dffeas \dut|led[1] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [1]),
+	.q(\dut|led_active [1]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[1] .is_wysiwyg = "true";
-defparam \dut|led[1] .power_up = "low";
+defparam \dut|led_active[1] .is_wysiwyg = "true";
+defparam \dut|led_active[1] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X79_Y4_N52
@@ -21397,7 +21397,7 @@ defparam \dut|Selector17~2 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X80_Y5_N31
-dffeas \dut|led[2] (
+dffeas \dut|led_active[2] (
 	.clk(\fpga_clk1_50~inputCLKENA0_outclk ),
 	.d(\dut|Selector17~2_combout ),
 	.asdata(vcc),
@@ -21408,11 +21408,11 @@ dffeas \dut|led[2] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [2]),
+	.q(\dut|led_active [2]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[2] .is_wysiwyg = "true";
-defparam \dut|led[2] .power_up = "low";
+defparam \dut|led_active[2] .is_wysiwyg = "true";
+defparam \dut|led_active[2] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X75_Y7_N18
@@ -21614,7 +21614,7 @@ defparam \dut|Selector16~2 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X80_Y5_N37
-dffeas \dut|led[3] (
+dffeas \dut|led_active[3] (
 	.clk(\fpga_clk1_50~inputCLKENA0_outclk ),
 	.d(\dut|Selector16~2_combout ),
 	.asdata(vcc),
@@ -21625,11 +21625,11 @@ dffeas \dut|led[3] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [3]),
+	.q(\dut|led_active [3]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[3] .is_wysiwyg = "true";
-defparam \dut|led[3] .power_up = "low";
+defparam \dut|led_active[3] .is_wysiwyg = "true";
+defparam \dut|led_active[3] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X79_Y4_N39
@@ -21831,7 +21831,7 @@ defparam \dut|Selector15~2 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X78_Y4_N1
-dffeas \dut|led[4] (
+dffeas \dut|led_active[4] (
 	.clk(\fpga_clk1_50~inputCLKENA0_outclk ),
 	.d(\dut|Selector15~2_combout ),
 	.asdata(vcc),
@@ -21842,11 +21842,11 @@ dffeas \dut|led[4] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [4]),
+	.q(\dut|led_active [4]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[4] .is_wysiwyg = "true";
-defparam \dut|led[4] .power_up = "low";
+defparam \dut|led_active[4] .is_wysiwyg = "true";
+defparam \dut|led_active[4] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X75_Y7_N15
@@ -22004,7 +22004,7 @@ defparam \dut|Selector14~2 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X78_Y4_N37
-dffeas \dut|led[5] (
+dffeas \dut|led_active[5] (
 	.clk(\fpga_clk1_50~inputCLKENA0_outclk ),
 	.d(\dut|Selector14~2_combout ),
 	.asdata(vcc),
@@ -22015,11 +22015,11 @@ dffeas \dut|led[5] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [5]),
+	.q(\dut|led_active [5]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[5] .is_wysiwyg = "true";
-defparam \dut|led[5] .power_up = "low";
+defparam \dut|led_active[5] .is_wysiwyg = "true";
+defparam \dut|led_active[5] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X78_Y7_N52
@@ -22197,7 +22197,7 @@ defparam \dut|Selector13~2 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X78_Y4_N43
-dffeas \dut|led[6] (
+dffeas \dut|led_active[6] (
 	.clk(\fpga_clk1_50~inputCLKENA0_outclk ),
 	.d(\dut|Selector13~2_combout ),
 	.asdata(vcc),
@@ -22208,11 +22208,11 @@ dffeas \dut|led[6] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [6]),
+	.q(\dut|led_active [6]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[6] .is_wysiwyg = "true";
-defparam \dut|led[6] .power_up = "low";
+defparam \dut|led_active[6] .is_wysiwyg = "true";
+defparam \dut|led_active[6] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X85_Y4_N0
@@ -24832,57 +24832,57 @@ defparam \dut|clk_gen_comp|internal_div_1 .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X78_Y7_N48
-cyclonev_lcell_comb \dut|led[7]~0 (
+cyclonev_lcell_comb \dut|led_active[7]~0 (
 // Equation(s):
-// \dut|led[7]~0_combout  = ( !\dut|led [7] )
+// \dut|led_active[7]~0_combout  = ( !\dut|led_active [7] )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
-	.datae(!\dut|led [7]),
+	.datae(!\dut|led_active [7]),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\dut|led[7]~0_combout ),
+	.combout(\dut|led_active[7]~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \dut|led[7]~0 .extended_lut = "off";
-defparam \dut|led[7]~0 .lut_mask = 64'hFFFF0000FFFF0000;
-defparam \dut|led[7]~0 .shared_arith = "off";
+defparam \dut|led_active[7]~0 .extended_lut = "off";
+defparam \dut|led_active[7]~0 .lut_mask = 64'hFFFF0000FFFF0000;
+defparam \dut|led_active[7]~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y1_N24
-cyclonev_lcell_comb \dut|led[7]~feeder (
+cyclonev_lcell_comb \dut|led_active[7]~feeder (
 // Equation(s):
-// \dut|led[7]~feeder_combout  = ( \dut|led[7]~0_combout  )
+// \dut|led_active[7]~feeder_combout  = ( \dut|led_active[7]~0_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\dut|led[7]~0_combout ),
+	.dataf(!\dut|led_active[7]~0_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\dut|led[7]~feeder_combout ),
+	.combout(\dut|led_active[7]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \dut|led[7]~feeder .extended_lut = "off";
-defparam \dut|led[7]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \dut|led[7]~feeder .shared_arith = "off";
+defparam \dut|led_active[7]~feeder .extended_lut = "off";
+defparam \dut|led_active[7]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \dut|led_active[7]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X31_Y1_N25
-dffeas \dut|led[7] (
+dffeas \dut|led_active[7] (
 	.clk(\dut|clk_gen_comp|internal_div_1~q ),
-	.d(\dut|led[7]~feeder_combout ),
+	.d(\dut|led_active[7]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\push_button_n[0]~inputCLKENA0_outclk ),
 	.aload(gnd),
@@ -24891,11 +24891,11 @@ dffeas \dut|led[7] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\dut|led [7]),
+	.q(\dut|led_active [7]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \dut|led[7] .is_wysiwyg = "true";
-defparam \dut|led[7] .power_up = "low";
+defparam \dut|led_active[7] .is_wysiwyg = "true";
+defparam \dut|led_active[7] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X56_Y0_N1
