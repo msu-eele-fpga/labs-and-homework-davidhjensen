@@ -29,7 +29,7 @@ architecture arch of debouncer is
 begin
   debounce : process (clk, rst)
   begin
-    if (rst) then
+    if (rst = '1') then
       debounced <= '0';
       count     <= 0;
       inter_out <= '0';
