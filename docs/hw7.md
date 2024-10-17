@@ -126,3 +126,47 @@ grep -i -n -o 'and' gibberish.txt
 grep -inow 'we' gibberish.txt 
 1:we
 3:we
+
+grep -oPi 'to [a-z]+' gibberish.txt
+To be
+to sleep
+to die
+to take
+to suffer
+
+grep -ciP 'fpgas' fpgas.txt
+4
+
+grep -iP '\b\w*(ot|ower|ile)' fpgas.txt
+FPGAs are hot.
+FPGAs are not.
+Software engineers cower,
+Few have climbed the tower.
+Years gone by, nary a smile,
+First design to compile.
+
+grep -iPc '^ *[--]' hdl/*/*.vhd
+hdl/async-conditioner/async_conditioner.vhd:1
+hdl/async-conditioner/debouncer.vhd:0
+hdl/async-conditioner/one_pulse.vhd:3
+hdl/async-conditioner/synchronizer.vhd:0
+hdl/led-patterns/LED_patterns.vhd:9
+hdl/led-patterns/clock_gen.vhd:8
+hdl/led-patterns/led_patterns_avalon.vhd:3
+hdl/led-patterns/pat_gen_0.vhd:0
+hdl/led-patterns/pat_gen_1.vhd:0
+hdl/led-patterns/pat_gen_2.vhd:0
+hdl/led-patterns/pat_gen_3.vhd:0
+hdl/led-patterns/pat_gen_4.vhd:0
+hdl/synchronizer/synchronizer.vhd:0
+hdl/timed_counter/timed_counter.vhd:3
+hdl/vending-machine/vending_machine.vhd:0
+
+ls > ls-output.txt
+cat ls-output.txt
+file-sizes.txt
+fpgas.txt
+gibberish.txt
+log.csv
+lorem-ipsum.txt
+
