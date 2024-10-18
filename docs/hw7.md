@@ -1,19 +1,40 @@
-```wc -w lorem-ipsum.txt 
+# HW 7 - Linux CLI practice
+
+## Below are the problems, copy-and-pasted in. I confirm that the work is my own.
+
+### Problem 1
+`wc -w lorem-ipsum.txt`
+```
 296 lorem-ipsum.txt
+```
 
-wc -c lorem-ipsum.txt 
+### Problem 2
+`wc -c lorem-ipsum.txt `
+```
 2069 lorem-ipsum.txt
+```
 
-wc -l lorem-ipsum.txt 
+### Problem  3
+`wc -l lorem-ipsum.txt `
+```
 20 lorem-ipsum.txt
+```
 
-sort -h file-sizes.txt
+### Problem 4
+`sort -h file-sizes.txt`
+```
 TONS OF STUFF with last one being 72G
+```
 
-sort -hr file-sizes.txt
+### Problem 5
+`sort -hr file-sizes.txt`
+```
 TONS OF STUFF with last ones being 0
+```
 
-cut -d',' -f3 log.csv 
+### Problem 6
+`cut -d',' -f3 log.csv`
+```
 ip
 116.49.145.124
 235.43.71.244
@@ -35,8 +56,11 @@ ip
 44.165.162.10
 166.191.169.122
 42.208.215.59
+```
 
-cut -d',' -f2-3 log.csv 
+### Problem 7
+`cut -d',' -f2-3 log.csv `
+```
 date,ip
 1985-12-29T03:45:48.331Z,116.49.145.124
 1975-08-19T08:27:05.166Z,235.43.71.244
@@ -58,8 +82,11 @@ date,ip
 2020-05-01T10:07:36.210Z,44.165.162.10
 1971-04-14T11:42:50.344Z,166.191.169.122
 1984-02-07T17:10:40.523Z,42.208.215.59
+```
 
-cut -d',' -f1,4 log.csv 
+### Problem 8
+`cut -d',' -f1,4 log.csv`
+``` 
 uuid,country
 13UVM9UZGVC5Z8FH,Australia
 2YROM18LXGZE5S6N,Cuba
@@ -81,17 +108,26 @@ DQ0CAYCQ92N6U0LN,Maldives
 SVFJHHHJN30ULVBI,Gambia
 013FDZ7LOUVSPIUZ,Uganda
 JAPIFTQIGG4MXMQU,Australia
+```
 
-head -n 3 gibberish.txt 
+### Problem 9
+`head -n 3 gibberish.txt `
+```
 To be: that we end to sleep of so long a life;
 for who would fardels bear thought, and the oppressor's wrong,
 about the natural shocks the slings and enterprises of dispriz'd lose ills we have,
+```
 
-tail -n 2 gibberish.txt
+### Problem 10
+`tail -n 2 gibberish.txt`
+```
 for in the rub;
 open for whose thought, and the insolence to suffer the name of off this quietus makes
+```
 
-tail -n +2 log.csv 
+### Problem 11
+`tail -n +2 log.csv `
+```
 13UVM9UZGVC5Z8FH,1985-12-29T03:45:48.331Z,116.49.145.124,Australia
 2YROM18LXGZE5S6N,1975-08-19T08:27:05.166Z,235.43.71.244,Cuba
 FQZ53Q6D7V1XQI2V,1980-02-04T23:15:47.711Z,70.31.14.16,Uzbekistan
@@ -112,8 +148,11 @@ DQ0CAYCQ92N6U0LN,1972-09-05T08:09:49.900Z,204.32.243.160,Maldives
 SVFJHHHJN30ULVBI,2020-05-01T10:07:36.210Z,44.165.162.10,Gambia
 013FDZ7LOUVSPIUZ,1971-04-14T11:42:50.344Z,166.191.169.122,Uganda
 JAPIFTQIGG4MXMQU,1984-02-07T17:10:40.523Z,42.208.215.59,Australia
+```
 
-grep -i -n -o 'and' gibberish.txt 
+### Problem 12
+`grep -i -n -o 'and' gibberish.txt`
+``` 
 2:and
 3:and
 4:and
@@ -122,30 +161,45 @@ grep -i -n -o 'and' gibberish.txt
 6:and
 6:and
 8:and
+```
 
-grep -inow 'we' gibberish.txt 
+### Problem 13
+`grep -inow 'we' gibberish.txt `
+```
 1:we
 3:we
+```
 
-grep -oPi 'to [a-z]+' gibberish.txt
+### Problem 14
+`grep -oPi 'to [a-z]+' gibberish.txt`
+```
 To be
 to sleep
 to die
 to take
 to suffer
+```
 
-grep -ciP 'fpgas' fpgas.txt
+### Problem 15
+`grep -ciP 'fpgas' fpgas.txt`
+```
 4
+```
 
-grep -iP '\b\w*(ot|ower|ile)' fpgas.txt
+### Problem 16
+`grep -iP '\b\w*(ot|ower|ile)' fpgas.txt`
+```
 FPGAs are hot.
 FPGAs are not.
 Software engineers cower,
 Few have climbed the tower.
 Years gone by, nary a smile,
 First design to compile.
+```
 
-grep -iPc '^ *[--]' hdl/*/*.vhd
+### Problem 17
+`grep -iPc '^ *[--]' hdl/*/*.vhd`
+```
 hdl/async-conditioner/async_conditioner.vhd:1
 hdl/async-conditioner/debouncer.vhd:0
 hdl/async-conditioner/one_pulse.vhd:3
@@ -161,12 +215,52 @@ hdl/led-patterns/pat_gen_4.vhd:0
 hdl/synchronizer/synchronizer.vhd:0
 hdl/timed_counter/timed_counter.vhd:3
 hdl/vending-machine/vending_machine.vhd:0
+```
 
-ls > ls-output.txt
+### Problem 18
+`ls > ls-output.txt`
+```
 cat ls-output.txt
 file-sizes.txt
 fpgas.txt
 gibberish.txt
 log.csv
 lorem-ipsum.txt
+```
 
+### Problem 19
+
+`sudo dmesg | grep -iP 'CPU topo'
+```
+NOTHING SHOWED UP
+```
+
+### Problem 20
+
+`ls Desktop/labs-and-homework-davidhjensen/hdl/*/*.vhd | grep -ciP '.vhd'`
+```
+15
+```
+
+### Problem 21
+`grep -iP '(--)+' ./*/*.vhd | wc -l`
+```
+28
+```
+
+### Problem 22
+`grep -inP 'FPGAs' fpgas.txt | cut -d':' -f1 `
+```
+1
+2
+4
+8
+```
+
+### Problem 23
+`du -h * | sort -hr | head -n 3`
+```
+12M	quartus/lab2
+12M	quartus
+8.5M	quartus/lab2/simulation/questa
+```
