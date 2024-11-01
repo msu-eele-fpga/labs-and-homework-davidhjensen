@@ -22,12 +22,12 @@ void verbose_print(uint32_t pattern, uint32_t time);
  * Return: void.
  */
 
-void file_to_patterns_and_times(char *file_name, uint32_t *pattern_array, uint32_t *time_array, int *num_patterns);
+void file_to_patterns_and_times(char *file_name, uint32_t **pattern_array, uint32_t **time_array, int *num_patterns);
 /**
  * file_to_patterns_and_times() - This function read a file holding patterns and times and stores them in provided arrays.
  * @file_name: Pointer to the string that holds the file name.
- * @pattern_array: Pointer to the array of unit32_t values corrisponding to the patterns
- * @time_array: Pointer to the array of uint32_t values corrisponding to the time each pattern should be displayed
+ * @pattern_array: Address of pointer to the array of unit32_t values corrisponding to the patterns
+ * @time_array: Address of pointer to the array of uint32_t values corrisponding to the time each pattern should be displayed
  * @num_patterns: Pointer to the number of patterns to display
  *
  * The function will open and read the file that is provided. The file has the following format:
@@ -47,14 +47,14 @@ void file_to_patterns_and_times(char *file_name, uint32_t *pattern_array, uint32
 int write_to_devmem(int fd, uint32_t address, size_t page_size, uint32_t data);
 /**
  * write_to_devmem() - Write a provided 32-bit piece of data to the FPGA.
- * @fd: TODO
- * @address: TODO
- * @page_size: TODO
- * @data: TODO
+ * @fd: Handle to the memory file
+ * @address: Address to write to data to on the FPGA
+ * @page_size: Size of a page in memory
+ * @data: 32-bit word to write to memory
  *
- * TODO
+ * Writes to devmem
  *
- * Return: void.
+ * Return: Returns 1 if uncessessful; 0 if successful
  */
 
 void int_handler(int irrelevant);
@@ -88,9 +88,7 @@ int main (int argc, char **argv)
 
   // allocate memory for patterns and times
   uint32_t *patterns;
-  patterns = malloc(1*sizeof(uint32_t));
   uint32_t *pattern_times;
-  pattern_times = malloc(1*sizeof(uint32_t));
   
   int index;
   int c;
@@ -136,8 +134,8 @@ int main (int argc, char **argv)
 			return 1;
 		}
 		num_patterns = num_args / 2;
-		patterns = realloc(patterns, num_patterns*sizeof(uint32_t));
-		pattern_times = realloc(pattern_times, num_patterns*sizeof(uint32_t));
+		patterns = malloc(num_patterns*sizeof(uint32_t));
+		pattern_times = malloc(num_patterns*sizeof(uint32_t));
 		for(int i=optind; i<argc; i=i+2)
 		{
 			patterns[(i-optind)/2] = strtoul(argv[i-1], NULL, 0);
@@ -147,17 +145,8 @@ int main (int argc, char **argv)
 
 	  case 'f':
 	  	file_flag = 1;
-		// if no file is passed
-		// TODO
-		if (0) {
-			fprintf(stderr, "-f flag requires that a file is passed.\n");
-			return 1;
-		}
-		else
-		{
-			// save file name
-			strcpy(patterns_file, optarg);
-		}
+		// save file name
+		strcpy(patterns_file, optarg);
 		break;
 
       case '?':
@@ -209,6 +198,13 @@ if (write_to_devmem(fd, SW_CONTROL_ADDRESS, PAGE_SIZE, SW_CONTROL_ON))
 	return 1;
 }
 
+// read file patterns and times if needed
+if (file_flag == 1)
+{
+	file_to_patterns_and_times(patterns_file, &patterns, &pattern_times, &num_patterns);
+	fprintf(stderr, "Pattern read compelte\n");
+}
+
 while (keep_running)
 {
 	if (pattern_flag == 1) 
@@ -228,17 +224,18 @@ while (keep_running)
 	}
 	else if (file_flag == 1) 
 	{
-		file_to_patterns_and_times(patterns_file, patterns, pattern_times, &num_patterns);
 		for (int i=0; i<num_patterns; i++)
 		{
 			if (verbose_flag == 1) 
 			{
 				verbose_print(patterns[i], pattern_times[i]);
 			}
+
 			if (write_to_devmem(fd, PATTERN_ADDRESS, PAGE_SIZE, patterns[i]))
 			{
 				return 1;
 			}
+
 			usleep(pattern_times[i]*1000);
 		}
 	}
@@ -277,16 +274,16 @@ void verbose_print(uint32_t pattern, uint32_t time)
 		}
 		pattern <<= 1;
 	}
-	printf("| Display time: %d ms\n", time);
+	printf(" | Display time: %d ms\n", time);
 	return;
 }
 
-void file_to_patterns_and_times(char *file_name, uint32_t *pattern_array, uint32_t *time_array, int *num_patterns)
+void file_to_patterns_and_times(char *file_name, uint32_t **pattern_array, uint32_t **time_array, int *num_patterns)
 /**
  * file_to_patterns_and_times() - This function read a file holding patterns and times and stores them in provided arrays.
  * @file_name: Pointer to the string that holds the file name.
- * @pattern_array: Pointer to the array of unit32_t values corrisponding to the patterns
- * @time_array: Pointer to the array of uint32_t values corrisponding to the time each pattern should be displayed
+ * @pattern_array: Address of pointer to the array of unit32_t values corrisponding to the patterns
+ * @time_array: Address of pointer to the array of uint32_t values corrisponding to the time each pattern should be displayed
  * @num_patterns: Pointer to the number of patterns to display
  *
  * The function will open and read the file that is provided. The file has the following format:
@@ -304,9 +301,11 @@ void file_to_patterns_and_times(char *file_name, uint32_t *pattern_array, uint32
  */
 {
 	// open file
+	fprintf(stderr, "Opening file\n");
 	FILE *patterns_file_ptr;
 	patterns_file_ptr = fopen(file_name, "r");
 
+	fprintf(stderr, "Counting number of lines\n");
 	// count the number of lines
 	int num_lines = 0;
 	char line_buf[100];
@@ -319,19 +318,24 @@ void file_to_patterns_and_times(char *file_name, uint32_t *pattern_array, uint32
 	rewind(patterns_file_ptr);
 
 	// reallocate pattern arrays
-	pattern_array = realloc(pattern_array, num_lines*sizeof(uint32_t));
-	time_array = realloc(time_array, num_lines*sizeof(uint32_t));
-
+	*pattern_array = malloc(num_lines*sizeof(uint32_t));
+	uint32_t *sudo_pattern_array = malloc(num_lines*sizeof(uint32_t));
+	*time_array = malloc(num_lines*sizeof(uint32_t));
+	uint32_t *sudo_time_array = malloc(num_lines*sizeof(uint32_t));
+	
 	// save patterns and times
 	char *params;
 	for(int i=0; i<num_lines; i++)
 	{
 		fgets(line_buf, sizeof(line_buf), patterns_file_ptr);
 		params = strtok(line_buf, " ");
-		pattern_array[i] = strtoul(params, NULL, 0);
+		sudo_pattern_array[i] = strtoul(params, NULL, 0);
 		params = strtok(NULL, " ");
-		time_array[i] = strtoul(params, NULL, 0);
+		sudo_time_array[i] = strtoul(params, NULL, 0);
 	}
+
+	*pattern_array = sudo_pattern_array;
+	*time_array = sudo_time_array;
 
 	return;
 }
