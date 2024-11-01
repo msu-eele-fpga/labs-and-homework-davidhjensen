@@ -4,16 +4,6 @@
 A Linux kernel module was built with a basic init and exit functions.
 
 ## Deliverables
-
-
-### Questions 
-If the deliverables include questions you need to answer, put the answers here. Use blockquotes to indicate the question, then answer underneath the blockquote. Example formatting is shown below.
-
-> What is your favorite thing about SoC FPGAs?
-
-Everything!!!
-
-> What is the base address of your component? 
-
-0xDEADBEEF
-
+![Successful insert and remove of the module](assets/hw-08_insmod_rmmod.jpg)
+![Module info](assets/hw-08_modinfo.jpg)
+![uname -](assets/hw-08_uname.jpg)
