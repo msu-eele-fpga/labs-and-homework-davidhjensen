@@ -273,7 +273,7 @@ begin
     port map
 	 (
 		clk => fpga_clk1_50,
-		rst => push_button_n(0),
+		rst => not push_button_n(0),
 		period => "000001000000000000000000000",
 		duty_cycle => "01000000000",
 		output => gpio_0(0)
