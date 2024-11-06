@@ -229,9 +229,6 @@ architecture de10nano_arch of de10nano_top is
       hps_io_hps_io_gpio_inst_gpio53  : inout std_logic;
       hps_io_hps_io_gpio_inst_gpio54  : inout std_logic;
       hps_io_hps_io_gpio_inst_gpio61  : inout std_logic;
-      led_patterns_push_button        : in std_logic                    := 'X'; -- push_button
-      led_patterns_switches           : in std_ulogic_vector(3 downto 0) := (others => 'X'); -- switches
-      led_patterns_led                : out std_ulogic_vector(7 downto 0); -- led
       memory_mem_a                    : out std_ulogic_vector(14 downto 0);
       memory_mem_ba                   : out std_ulogic_vector(2 downto 0);
       memory_mem_ck                   : out std_logic;
@@ -249,35 +246,15 @@ architecture de10nano_arch of de10nano_top is
       memory_mem_dm                   : out std_ulogic_vector(3 downto 0);
       memory_oct_rzqin                : in std_logic;
       clk_clk                         : in std_logic;
-      reset_reset_n                   : in std_logic
-    );
+      reset_reset_n                   : in std_logic;
+		export_red_out						  : out std_logic;
+		export_green_out					  : out std_logic;
+		export_blue_out					  : out std_logic
+		);
   end component soc_system;
   
-  component pwm_controller is
-	  port (
-		 clk : in std_logic;
-		 rst : in std_logic; -- active high
-		 -- PWM repetition period in milliseconds;
-		 -- datatype (W.F) (27.21) is individually assigned
-		 period : in unsigned(26 downto 0);
-		 -- PWM duty cycle between [0 1]; out-of-range values are hard-limited
-		 -- datatype (W.F) (11.10) is individually assigned;
-		 duty_cycle : in std_logic_vector(10 downto 0);
-		 output     : out std_logic
-	  );
-  end component pwm_controller;
 
 begin
-
-  pwm_ctrl : component pwm_controller
-    port map
-	 (
-		clk => fpga_clk1_50,
-		rst => not push_button_n(0),
-		period => "000001000000000000000000000",
-		duty_cycle => "01000000000",
-		output => gpio_0(0)
-	  );
 	  
   u0 : component soc_system
     port map
@@ -362,13 +339,14 @@ begin
       memory_mem_dm      => hps_ddr3_dm,
       memory_oct_rzqin   => hps_ddr3_rzq,
 
-      -- new from IP core designer
-      led_patterns_push_button => not push_button_n(1),
-      led_patterns_switches => sw,
-      led_patterns_led => led,
-
       clk_clk       => fpga_clk1_50,
-      reset_reset_n => push_button_n(0) -- hook up to your reset signal; note that reset_reset_n is *active-low*
+      reset_reset_n => push_button_n(0), -- hook up to your reset signal; note that reset_reset_n is *active-low*
+		
+		-- hook up outputs
+		export_red_out => gpio_0(0),
+		export_green_out => gpio_0(1),
+		export_blue_out => gpio_0(2)
+		
     );
 
   end architecture de10nano_arch;
