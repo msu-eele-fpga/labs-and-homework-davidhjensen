@@ -4,11 +4,28 @@
 #include <errno.h>
 #include <string.h>
 #include <unistd.h>
+#include <signal.h>
 
 // TODO: update these offsets if your address are different
 #define HPS_LED_CONTROL_OFFSET 0x0
-#define BASE_PERIOD_OFFSET 0x4
-#define LED_REG_OFFSET 0x08
+#define BASE_PERIOD_OFFSET 0x8
+#define LED_REG_OFFSET 0x4
+
+static volatile int keep_running = 1;
+
+void int_handler(int irrelevant)
+/**
+ * int_handler() - Switch FPGA to hardware control mode and exit program when cntl-C is entered
+ * @arg1: TODO
+ *
+ * TODO
+ * 
+ * Return: void.
+ */
+{
+	printf("\nLOOP KILLED!\n");
+	keep_running = 0;
+}
 
 int main () {
 	FILE *file;
@@ -51,35 +68,27 @@ int main () {
 	// We need to "flush" so the OS finishes writing to the file before our code continues.
 	fflush(file);
 
-	// Write some values to the LEDs
-	printf("writing patterns to LEDs....\n");
-	val = 0x55;
-    ret = fseek(file, LED_REG_OFFSET, SEEK_SET);
-	ret = fwrite(&val, 4, 1, file);
-	fflush(file);
+	// Write cool pattern to LEDs as long until ctl-c
+	signal(SIGINT, int_handler);
+	int count = 0;
+	char slow = 0x1;
+	char fast = 0x80;
+	while (keep_running) 
+	{
+		fast = (fast >> 1) | (fast << 7);
+		if (count > 16)
+		{
+			count = 0;
+			slow = (slow << 1) | (slow >> 7);
+		}
+		val = fast | slow;
+		ret = fseek(file, LED_REG_OFFSET, SEEK_SET);
+		ret = fwrite(&val, 4, 1, file);
+		fflush(file);
+		usleep(20*1000);
+		count = count + 1;
+	}
 
-	sleep(1);
-
-	val = 0xaa;
-    ret = fseek(file, LED_REG_OFFSET, SEEK_SET);
-	ret = fwrite(&val, 4, 1, file);
-	fflush(file);
-
-	sleep(1);
-
-	val = 0xff;
-    ret = fseek(file, LED_REG_OFFSET, SEEK_SET);
-	ret = fwrite(&val, 4, 1, file);
-	fflush(file);
-
-	usleep(0.5e6);
-
-	val = 0x00;
-    ret = fseek(file, LED_REG_OFFSET, SEEK_SET);
-	ret = fwrite(&val, 4, 1, file);
-	fflush(file);
-
-	sleep(1);
 
 	// Turn on hardware-control mode
 	printf("back to hardware-control mode....\n");
